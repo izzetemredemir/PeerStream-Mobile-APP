@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-//import "LiveStreams.dart";
+import "LiveStreams.dart";
 
 class MainPage extends StatefulWidget {
   const MainPage();
@@ -13,7 +13,7 @@ class _MainPageState extends State<MainPage> {
 
 //list of widgets to call ontap
   final widgetOptions = [
-    new Text("PeerStream"),
+    new LiveStreams(),
     new Text("test2"),
     new Text("test3"),
   ];
