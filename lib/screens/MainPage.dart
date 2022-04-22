@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 //import "LiveStreams.dart";
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage();
+class MainPage extends StatefulWidget {
+  const MainPage();
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MainPage> createState() => _MainPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MainPageState extends State<MainPage> {
   int selectedIndex = 0;
 
 //list of widgets to call ontap

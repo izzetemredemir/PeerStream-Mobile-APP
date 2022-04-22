@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'models/global.dart';
-import "screens/HomePage.dart";
+import "screens/MainPage.dart";
 
 GlobalKey<NavigatorState> _navigator = GlobalVariable.navState;
 void main() async {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         onUnknownRoute: (RouteSettings settings) =>
-            MaterialPageRoute(builder: (context) => MyHomePage()),
+            MaterialPageRoute(builder: (context) => MainPage()),
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
