@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         navigatorObservers: [],
         routes: {
-          '/': (context) => MyHomePage(),
+          '/': (context) => MainPage(),
         },
         color: Color.fromRGBO(
           33,

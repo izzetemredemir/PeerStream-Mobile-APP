@@ -13,7 +13,7 @@ class _MainPageState extends State<MainPage> {
 
 //list of widgets to call ontap
   final widgetOptions = [
-    new Text("test1"),
+    new Text("PeerStream"),
     new Text("test2"),
     new Text("test3"),
   ];
@@ -24,7 +24,7 @@ class _MainPageState extends State<MainPage> {
     });
   }
 
-  final widgetTitle = ["Chat", "Status", "Call"];
+  final widgetTitle = ["PeerStream", "Status", "Call"];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
