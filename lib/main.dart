@@ -1,22 +1,61 @@
 import 'package:flutter/material.dart';
-import './screens/HomePage.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:flutter/services.dart';
+import 'models/global.dart';
+import "screens/HomePage.dart";
 
-void main() {
-  runApp(const MyApp());
+GlobalKey<NavigatorState> _navigator = GlobalVariable.navState;
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  runApp(App());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+        onUnknownRoute: (RouteSettings settings) =>
+            MaterialPageRoute(builder: (context) => MyHomePage()),
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        debugShowCheckedModeBanner: false,
+        navigatorObservers: [],
+        routes: {
+          '/': (context) => MyHomePage(),
+        },
+        color: Color.fromRGBO(
+          33,
+          37,
+          41,
+          1,
+        ));
+  }
+}
+
+class App extends StatefulWidget {
+  @override
+  _AppState createState() => _AppState();
+}
+
+class _AppState extends State<App> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light); // 1
+    return FutureBuilder(
+      builder: (context, snapshot) {
+        // Check for errors
+        if (snapshot.hasError) {
+          return Text("Error");
+        }
+        return MyApp();
+      },
     );
   }
 }
