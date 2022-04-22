@@ -129,8 +129,7 @@ class _LiveStreamsState extends State<LiveStreams> {
                                               BorderRadius.circular(3),
                                           boxShadow: [
                                             BoxShadow(
-                                                // color: Colors.grey[850],
-                                                color: Colors.red,
+                                                color: (Colors.grey[850])!,
                                                 spreadRadius: 1),
                                           ],
                                         ),
@@ -138,7 +137,8 @@ class _LiveStreamsState extends State<LiveStreams> {
                                             ? Image.network(
                                                 "https://media.istockphoto.com/vectors/live-stream-banner-vector-id1306922705?k=20&m=1306922705&s=612x612&w=0&h=GxSiBE-KNttx0pQ6jx21IJCmkGLE21GEGCzI9BFHEDs=",
                                                 fit: BoxFit.fill)
-                                            : Image.asset('assets/no-image.jpg',
+                                            : Image.asset(
+                                                'assets/no-stream.png',
                                                 width: 100,
                                                 height: 100,
                                                 fit: BoxFit.fill),
