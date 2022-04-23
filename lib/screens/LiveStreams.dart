@@ -59,8 +59,7 @@ class _LiveStreamsState extends State<LiveStreams> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => Text("test"),
-                                    ));
+                                        builder: (context) => Text("ster")));
                               },
                               child: (Container(
                                 decoration: BoxDecoration(
@@ -99,7 +98,8 @@ class _LiveStreamsState extends State<LiveStreams> {
                                                 1,
                                               ),
                                               child: Text(
-                                                index.toString(),
+                                                index.toString() +
+                                                    "Bla Bla Stream Texrt",
                                                 style: TextStyle(
                                                   color: Colors.white,
                                                 ),

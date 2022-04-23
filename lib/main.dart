@@ -15,22 +15,29 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        onUnknownRoute: (RouteSettings settings) =>
-            MaterialPageRoute(builder: (context) => MainPage()),
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        debugShowCheckedModeBanner: false,
-        navigatorObservers: [],
-        routes: {
-          '/': (context) => MainPage(),
-        },
+      onUnknownRoute: (RouteSettings settings) =>
+          MaterialPageRoute(builder: (context) => MainPage()),
+      theme: ThemeData(
+          appBarTheme: AppBarTheme(
         color: Color.fromRGBO(
-          33,
-          37,
-          41,
+          27,
+          34,
+          46,
           1,
-        ));
+        ),
+      )),
+      debugShowCheckedModeBanner: false,
+      navigatorObservers: [],
+      routes: {
+        '/': (context) => MainPage(),
+      },
+      color: Color.fromRGBO(
+        27,
+        34,
+        46,
+        1,
+      ),
+    );
   }
 }
 

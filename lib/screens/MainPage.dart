@@ -16,6 +16,7 @@ class _MainPageState extends State<MainPage> {
     new Text("Homepagei"),
     new LiveStreams(),
     new Text("test3"),
+    new Text("test4"),
   ];
 
   void onItemTapped(int index) {
@@ -24,7 +25,7 @@ class _MainPageState extends State<MainPage> {
     });
   }
 
-  final widgetTitle = ["PeerStream", "Live Streams", "Call"];
+  final widgetTitle = ["PeerStream", "Live Streams", "Call", "Wallet Connect"];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,6 +36,15 @@ class _MainPageState extends State<MainPage> {
         child: widgetOptions.elementAt(selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Color.fromRGBO(
+          27,
+          34,
+          46,
+          1,
+        ),
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.grey,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -48,9 +58,12 @@ class _MainPageState extends State<MainPage> {
             icon: Icon(Icons.add_circle),
             label: 'Mint Video NFT',
           ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.account_balance_wallet),
+            label: 'Wallet Connect',
+          ),
         ],
         currentIndex: selectedIndex,
-        fixedColor: Colors.deepPurple,
         onTap: onItemTapped,
         selectedLabelStyle: TextStyle(color: Colors.red, fontSize: 20),
       ),
