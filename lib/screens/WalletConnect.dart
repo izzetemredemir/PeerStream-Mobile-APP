@@ -1,4 +1,4 @@
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:web3_connect/web3_connect.dart';
 
 class Login extends StatefulWidget {
@@ -17,8 +17,7 @@ class _LoginState extends State<Login> {
       child: const Text("Log In"),
       onPressed: () async {
         await connection.connect();
-        print(connection.sign);
-        await connection.signer();
+
         if (connection.account != "") {
           Navigator.push(
               context,
@@ -80,4 +79,3 @@ class _HomeState extends State<Home> {
     );
   }
 }
-*/
