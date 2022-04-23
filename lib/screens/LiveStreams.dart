@@ -99,7 +99,7 @@ class _LiveStreamsState extends State<LiveStreams> {
                                               ),
                                               child: Text(
                                                 index.toString() +
-                                                    "Bla Bla Stream Texrt",
+                                                    "LiveStream Text",
                                                 style: TextStyle(
                                                   color: Colors.white,
                                                 ),
