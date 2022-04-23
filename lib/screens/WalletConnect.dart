@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web3_connect/web3_connect.dart';
+import 'MainPage.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -38,6 +39,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  void _moveToScreen2(BuildContext context) =>
+      Navigator.pushReplacementNamed(context, "screen2");
   bool killed = false;
   @override
   Widget build(BuildContext context) {
@@ -45,6 +48,11 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: const Text("Home Page"),
         automaticallyImplyLeading: false,
+        leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {
+              _moveToScreen2(context);
+            }),
       ),
       body: Center(
         child: Column(
