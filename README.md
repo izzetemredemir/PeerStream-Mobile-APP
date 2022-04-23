@@ -1,16 +1,14 @@
-# peerstream
+# Peer Stream Mobile App (Android & IOS)
 
-A new Flutter project.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Flutter Live Stream App 
 
-A few resources to get you started if this is your first Flutter project:
+Note: This is a prototype, not all features are working properly.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- Cross Platform
+- Watch All live Streams generated from our API services
+- Mint Video Nft in app webview
+- Connect with your Metamask Wallet
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![alt text](https://raw.githubusercontent.com/peer-stream/PeerStream-Mobile-APP/main/assets/icon.png)
