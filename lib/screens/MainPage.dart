@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import "LiveStreams.dart";
+import "WalletConnect.dart";
 
 class MainPage extends StatefulWidget {
   const MainPage();
@@ -15,8 +16,8 @@ class _MainPageState extends State<MainPage> {
   final widgetOptions = [
     new Text("Homepagei"),
     new LiveStreams(),
-    new Text("test3"),
-    new Text("test4"),
+    new Text("Homepagei"),
+    /*new Login(),*/
   ];
 
   void onItemTapped(int index) {
@@ -25,7 +26,7 @@ class _MainPageState extends State<MainPage> {
     });
   }
 
-  final widgetTitle = ["PeerStream", "Live Streams", "Call", "Wallet Connect"];
+  final widgetTitle = ["PeerStream", "Live Streams", "Mint Ntt"];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
