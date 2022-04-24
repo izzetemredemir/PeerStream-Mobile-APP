@@ -18,7 +18,8 @@ class WebViewExampleState extends State<WebViewExample> {
   @override
   Widget build(BuildContext context) {
     return WebView(
-      initialUrl: 'https://flutter.dev',
+            initialUrl: 'https://peerstream-web.herokuapp.com/mint',
+      javascriptMode: JavascriptMode.unrestricted,
     );
   }
 }
